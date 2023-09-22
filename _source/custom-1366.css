@@ -1,0 +1,139 @@
+@media screen and (min-width: 361px) and (max-width: 1378px) {
+	.al_container__fluid {
+		width: 100%;
+		margin: auto;
+		padding: 0 40px;
+	}
+	.navbar {
+		left: 40px;
+		right: 40px;
+	}
+	.navbar .navbar-item {
+		padding-right: 29px;
+	}		
+	.al_container {
+		padding: 0 40px;
+	}   
+	.al_icon-xxl {
+		margin: 0;
+		width: 120px;
+		height: 120px;
+	}	
+	.link__button-service {
+		display: none;
+	}
+	label.field .psuedo_select {
+		min-width: 132px;
+		font-size: 18px;
+	}
+	.site-header {
+		height: 600px;
+	}		
+	.slider-container {
+		margin-top: 5px;		
+		min-width: 312px;
+		padding: 10px 40px 20px 20px;		
+	}	
+	.slider-labels .caption {
+		font-size: 18px;
+	}
+	label.field {
+		margin: 5px 5px 5px 14px;
+		padding: 8px;
+	}	
+	.site-header__filter-wrapper {
+		height: 89px;
+	}	
+	.site-header__h1 {
+		font-size: 46px;
+		font-weight: 600;
+		line-height: 58px;
+	}	
+	.site-header__h2 {
+		font-size: 20px;
+	}
+	.section-header {
+		font-size: 34px;
+		padding-top: 100px;
+	}	
+	.cars-catalog__wrapper {
+		padding-top: 65px;
+		padding-bottom: 100px;
+	}
+	/* .cars__single-item {
+		width: calc(25% - 10px);
+	}	*/
+	.cars__single-item .header {
+		width: auto;
+		height: auto;
+	}
+	.cars__single-item .footer {
+		padding: 0 20px 20px 20px;
+	}
+	.cars__single-item.info .header h2 {
+		font-size: 34px;
+	}
+	.cars__single-item.info .header h3 {
+		font-size: 24px;
+	}	
+	.cars-available__slider {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}	
+	.cars-available__slider-item {
+		min-width: 378px;
+		height: 160px;
+		padding-left: 40px;
+	}
+	.cars-available__slider-item p {
+		padding: 0;
+		margin: 40px 0 0 0;
+		font-weight: 500;
+		font-size: 20px;
+	}	
+	.site-content__singup-to-maintenance .section-header {
+		font-size: 30px;
+		padding-bottom: 144px;
+	}	
+	.site-content__singup-to-maintenance .cars-brand span {
+		width: 180px;
+		height: 60px;
+	}	
+	.site-content__singup-to-maintenance .cars-brand {
+		margin-top: -80px;
+		padding-bottom: 40px;
+	}	
+	.singup-to-maintenance__row .al_iconed-text {
+		font-size: 12px;
+	}
+	.cars-brand img {
+		width: 236px;
+	}
+	.special-offers__wrapper {
+		padding-top: 65px;
+	}
+	.site-content__about-wrapper {
+		padding-top: 140px;
+		padding-bottom: 160px;
+	}
+	.about-item__text {
+		font-size: 24px;
+		padding-bottom: 20px;
+	}	
+	.about-item__subtext {
+		font-size: 20px;
+	}	
+	.site-content__about-header {
+		font-size: 34px;
+	}
+	.site-content__about-subheader {
+		font-size: 34px;
+		line-height: 38px;
+	}
+	.site-content__about-text {
+		font-size: 20px;
+	}	
+	.site-footer__content li a {
+		font-size: 18px;
+	}
+}

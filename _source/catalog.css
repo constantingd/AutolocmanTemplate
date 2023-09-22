@@ -1,0 +1,128 @@
+/* Cars catalog */
+.cars-available__slider {
+	margin-top: 140px;
+	margin-bottom: 160px;
+}
+.cars-available-slide {
+    max-width: 520px;
+}
+.cars-available__slider-item-wrapper {
+	color: #030303;
+}
+.cars-available__slider-item {
+	height: 160px;
+	padding-left: 50px;
+	border-left: 2px solid #030303;
+	align-items: start;
+	justify-content: space-between;
+}
+.cars-available__slider-item p {
+	padding: 0;
+	margin: 60px 0 0 0;
+	font-weight: 500;
+	font-size: 24px;
+}
+.cars-catalog__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 80px;
+	padding-bottom: 120px;
+	flex-wrap: wrap;
+}
+.cars__wrapper {
+    padding-bottom: 0;
+}
+.cars__single-item {
+    display: flex;
+    width: 400px;
+    color: #94989D;
+    background-color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-direction: column;
+	margin-bottom: 120px;
+}
+.cars__single-item .header {
+	position: relative;
+	width: 400px;
+	height: 300px;
+}
+.cars__single-item .description {
+	padding: 30px 0 0 0;
+}
+.cars__single-item .model {
+	color: #030303;
+	font-size: 24px;
+	font-weight: 500;
+	padding-top: 8px;
+}
+.cars__single-item .properties {
+	display: block;
+	padding: 20px 0 0 0;
+}
+.cars__single-item .properties:last-child {
+	padding-bottom: 20px;
+}
+.cars__single-item .footer {
+	flex: 1;
+	padding: 0 0 30px 0;
+	background-color: #FFF;
+}
+.cars__single-item .price {
+	color: #030303;
+	font-size: 24px;
+	font-weight: 600;
+}
+.cars__single-item .footer {
+	display: flex;
+	justify-content: space-between;
+}
+.cars__single-item.used-cars .description {
+	padding: 30px;
+}
+.cars__single-item.used-cars .footer {
+	flex-direction: column;
+	padding: 0 0 30px 30px;
+	align-items: flex-start;
+}
+.cars__single-item.used-cars .footer .select-car {
+	margin-top: 20px;
+}
+.cars__single-item.info .header {
+    color: #FFF;
+    font-size: 44px;
+    border-right: 17px solid #0E57C3;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    padding-left: 40px;
+}
+.cars__single-item.info .header h2 {
+	color: #0E57C3;
+	font-size: 44px;
+	font-weight: 700;
+}
+.cars__single-item.info .header h3 {
+	color: #161615;
+	font-size: 30px;
+	font-weight: 600;
+}
+.cars__single-item.info .footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+	padding: 40px;
+}
+.cars__single-item .badge {
+	position: absolute;
+}
+.cars-catalog__more {
+	padding-bottom: 120px;
+}
+.site-content__catalog-filter h1 {
+	padding-bottom: 40px;
+}

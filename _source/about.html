@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="form.select.js"></script>
+	<script src="form.range.js"></script>
+    <script src="jquery.bez.min.js"></script>
+	<script src="jquery.spincrement.min.js"></script>
+	<script src="jquery.accordion.min.js"></script>
+	<script src="template.base.js"></script>
+	<script src="template.inner.js"></script>
+	<script src="template.detailing.js"></script>
+    <!-- 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">	
+	<link rel="stylesheet" href="minimal.css">
+	-->
+	<link rel="stylesheet" href="bulma.min.css">
+	<link rel="stylesheet" href="bulma.custom.css">
+	<link rel="stylesheet" href="form.select.css">
+	<link rel="stylesheet" href="form.range.css">		
+	<link rel="stylesheet" href="swiper-bundle.min.css">		
+	<link rel="stylesheet" href="accordion.css">
+	<link rel="stylesheet" href="about.css">		
+	<link rel="stylesheet" href="inner.css">	
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="custom-1366.css">
+	<link rel="stylesheet" href="custom-360.css">
+	<title>Автолоцман</title>
+</head>
+
+<body class="layout-inner inner-two">
+	<div class="site-wrapper">		
+		<div class="start-screen"><div class="brand-image"></div></div>
+		<div class="site-header al_container p-0">
+			<div class="site-header__background background-credit" style="background-image:url(images/about/header.jpg)"></div>
+			<div class="site-header__overlay"></div>
+			<div class="site-header__suboverlay is-mobile-only"></div>
+			<div class="navbar__background"></div>
+			<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="https://bulma.io">
+					  <img src="images/logo.svg" width="160" height="40">
+					</a>
+
+					<a href="#" class="link__button-call is-mobile-only" style="align-items: center;">
+						<i class="al_icon al_icon-call" style="margin-left: -15px; width: 22px; height: 22px;"></i>
+					</a>
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					</a>
+				</div>
+				<div id="navbarBasic" class="navbar-menu">
+					<div class="navbar-start">
+					
+						<div class="navbar-item has-dropdown">
+							<a class="navbar-link is-arrowless">
+								Каталог автомобилей
+							</a>
+
+							<div class="navbar-dropdown">
+								<a class="navbar-item">
+									Новые автомобили
+								</a>
+								<a class="navbar-item">
+									Автомобили с пробегом
+								</a>
+							</div>
+						</div>
+					
+						<a class="navbar-item">
+							Сервис
+						</a>
+
+						<a class="navbar-item">
+							Услуги
+						</a>
+					  
+						<a class="navbar-item">
+							Акции
+						</a>
+					
+						<a class="navbar-item">
+							О компании
+						</a>
+					</div>
+
+					<div class="navbar-end">
+					  <div class="navbar-item pr-0">
+						<div class="right-buttons-block">
+						  <a href="#" class="link__button-service">
+							<i class="al_icon al_icon-service"></i>Записаться на сервис
+						  </a>
+						  <a href="#" class="link__button-call">
+							<i class="al_icon al_icon-call"></i>Заказать звонок
+						  </a>
+						  <a href="#" class="link__button-phone">
+							8 (8412) 929-111
+						  </a>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</nav>
+			<div class="site-header__content-wrapper al_container is-fullhd is-flex is-flex-direction-column">
+				<h1 class="site-header__h1">Автолоцман</h1>
+				<h2 class="site-header__h2">Автотехцентр. Официальный диллер известных мировых брендов в Пензе – Kia, Mazda, Skoda, Livan, Dong Feng.</h2>
+			</div>			
+		</div>
+		<div class="site-content">
+			<section class="site-content__about-header">
+				<div class="al_container">
+					<div class="site-header__organisations al_flex-1">
+						<h3 class="site-header__organisations-title dark">Официальный<br />дилер</h3>
+						<a href="#" class="al_icon al_icon-xxl al_icon-kia-dark is-desktop-only"></a>
+						<a href="#" class="al_icon al_icon-xxl al_icon-livan-dark is-desktop-only al_ml60"></a>
+						<div class="is-mobile-only al_row">
+							<div class="al_column al_column-middle"><a href="#" class="al_icon al_icon-xl al_icon-kia-dark"></a></div>
+							<div class="al_column al_column-middle"><a href="#" class="al_icon al_icon-xl al_icon-livan-dark"></a></div>
+						</div>
+						<span class="al_flex-grow-1 has-text-right"></span>
+						<h3 class="site-header__organisations-title dark">Официальный<br />сервис</h3>
+						<a href="#" class="al_icon al_icon-xxl al_icon-mazda-dark is-desktop-only"></a>
+						<a href="#" class="al_icon al_icon-xxl al_icon-skoda-dark is-desktop-only al_ml60"></a>
+						<div class="is-mobile-only al_row">
+							<div class="al_column al_column-middle"><a href="#" class="al_icon al_icon-xl al_icon-mazda-dark is-mobile-only"></a></div>
+							<div class="al_column al_column-middle"><a href="#" class="al_icon al_icon-xl al_icon-skoda-dark is-mobile-only"></a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="site-content__inner about-content__wrapper">
+				<div class="al_container">
+					<div class="al_row about-row">
+						<div class="al_column sidebar al_direction-column">
+							<div class="al_row about-content__sidebar">
+								<h3 style="text-transform: uppercase;">главное – отношение</h3>
+							</div>
+						</div>
+						<div class="al_column">
+							<div>
+								<h3 class="al_typo-h3">
+									«Автолоцман» зарекомендовал себя как профессиональное, надежное и развивающееся подразделение, отвечающее всем требованиям и стандартам автоцентра.
+								</h3>
+								<p class="al_typo-p">
+									Огромный модельный ряд представленных в салоне авто в Пензе, современное оснащение и оборудование автотехцентра, возможность заказать нужный Вам автомобиль, наличие всех условий, делающих покупку приятной, быстрой и необременительной, высокопрофессиональное обслуживание в течение не только гарантийного, но и послегарантийного срока – вот то, что выгодно отличает нашу компанию.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="al_container">
+					<div class="al_row about-row">
+						<div class="al_column sidebar al_direction-column">
+							<div class="al_row about-content__sidebar">
+								<h3>Автолоцман предлагает своим клиентам:</h3>
+							</div>
+						</div>
+						<div class="al_column">
+							<div class="al_row">
+								<div class="al_column">
+									<ul class="al_typo-list">
+										<li>удобные кредитные программы;</li>
+										<li>трейд-ин;</li>
+										<li>лизинг;</li>
+										<li>автострахование;</li>
+									</ul>
+								</div>
+								<div class="al_column">
+									<ul class="al_typo-list">
+										<li>тест-драйв;</li>
+										<li>помощь на дорогах;</li>
+										<li>техническое обслуживание</li>
+									</ul>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="al_container">
+					<h2 class="section-header">Всегда готовы Вам помочь</h2>
+					<div class="section-subheader">
+						<a href="#" class="swiper__slider-arrow-left al_icon al_icon-m al_icon-left"></a>
+						<a href="#" class="swiper__slider-arrow-right al_icon al_icon-m al_icon-right"></a>
+					</div>
+				</div>
+				<div class="al_container swiper" spaceBetween="0">
+					<ul class="employee__slider swiper-wrapper al_row">
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img1.png" alt="ФИО" />
+								<span class="employee__name">Шкердинский Аркадий Васильевич</span>
+								<span class="employee__prof">Продавец месяца</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>	
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img2.png" alt="ФИО" />
+								<span class="employee__name">Александр Борисович Ильин</span>
+								<span class="employee__prof">Генеральный директор</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>	
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img3.png" alt="ФИО" />
+								<span class="employee__name">Юлия Владимировна Артамонова</span>
+								<span class="employee__prof">Директор по продажам</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>	
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img1.png" alt="ФИО" />
+								<span class="employee__name">Александр Борисович Ильин</span>
+								<span class="employee__prof">Технический директор 	</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img1.png" alt="ФИО" />
+								<span class="employee__name">Шкердинский Аркадий</span>
+								<span class="employee__prof">Продавец месяца</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>	
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img2.png" alt="ФИО" />
+								<span class="employee__name">Александр Борисович Ильин</span>
+								<span class="employee__prof">Генеральный директор</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>	
+						<li class="employee-slide swiper-slide">
+							<div class="employee__slider-item al_column al_direction-column">
+								<img src="images/about/employee/img3.png" alt="ФИО" />
+								<span class="employee__name">Юлия Владимировна Артамонова</span>
+								<span class="employee__prof">Директор по продажам</span>
+								<a class="employee__mail" href="mailto:sha@auto-locman.ru">sha@auto-locman.ru</a>
+							</div>
+						</li>																																																							
+					</ul>
+				</div>	
+
+				<div class="al_container al_direction-column  al_container__gray">
+					<h2 class="section-header">Вакансии</h2>
+				</div>
+				<div class="al_container al_container__gray accordion-wrapper al_direction-column">
+					<ul id="my-accordion" class="accordionjs">
+						<li>
+							<div><span>01</span><span>Менеджер по продажам автомобилей</span></div>
+							<div class="vacancies-wrapper">
+								<h3 class="al_typo-h3-2">Обязанности:</h3>
+								<ul class="al_typo-list-2">
+									<li>приём и оформление автомобилей на сервисное обслуживание;</li>
+									<li>определение объёма, стоимости и сроков выполнения заявленных работ;</li>
+									<li>согласование стоимости и времени выполнения ремонта с клиентом;</li>
+									<li>сопровождение автомобиля клиента от момента приёма до выдачи;</li>
+									<li>контроль качества проведённого ремонта;</li>
+									<li>оформление необходимой документации</li>
+								</ul>
+								<h3 class="al_typo-h3-2">Требования:</h3>
+								<ul class="al_typo-list-2">
+									<li>среднее специальное или высшее техническое обоазование;</li>
+									<li>опыт работы мастером-консультантом/мастером-приемщиком или автомеханником от 1 года;</li>
+									<li>хорошее знание устройства автомобиля, систем, узлов и технологии ремонта;</li>
+									<li>хорошие коммуникативные и организационные навыки;</li>
+									<li>уверенный пользователь ПК, знание программы 1С</li>
+								</ul>
+								<h3 class="al_typo-h3-2">Условия:</h3>
+								<ul class="al_typo-list-2">
+									<li>официальное трудоустройство;</li>
+									<li>достойная оплата труда;</li>
+									<li>возможность профессионального и карьерного роста;</li>
+									<li>график работы 4/2, с 09.00 до 19.00</li>
+								</ul>																
+								<div class="al_typo-blockquote al_direction-row center al_column-middle is-desktop-only">
+									<div class="al_flex-1">
+										Как раз то, что я искал
+									</div>
+									<a href="#" class="al__button">Записаться на собеседование</a>
+								</div>								
+								<div class="al_typo-blockquote al_direction-column center al_column-middle is-mobile-only">
+									<div class="al_flex-1 al_pb40">
+										Как раз то, что я искал
+									</div>
+									<a href="#" class="al__button">Записаться на собеседование</a>
+								</div>																
+							</div>
+						</li>
+						<li>
+							<div><span>02</span><span>Мастер-приемщик автомобилей, KIA</span></div>
+							<div>
+								2<!-- Section content here. -->
+							</div>
+						</li>
+						<li>
+							<div><span>03</span><span>Жестянщик/ ученик автожестянщика</span></div>
+							<div>
+								3<!-- Section content here. -->
+							</div>
+						</li>
+					</ul>												
+				</div>															
+			</section>					
+		</div>
+		<div class="site-footer">
+			<div class="al_container site-footer__wrapper">
+				<div class="site-footer__header">
+					<a href="#" class="footer-logo">
+						<img src="images/logo_footer.svg" alt="Автолоцман" />
+					</a>
+					<div class="is-desktop-only">
+						<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+						<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+					</div>
+				</div>
+				<div class="site-footer__content al_pt40">
+					<div class="al_row">
+						<div class="al_column al_column-4 al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item"><strong>Новые автомобили</strong></a>
+								<a href="#" class="al_menu-item"><strong>Автомобили с пробегом</strong></a>
+								<a href="#" class="al_menu-item"><strong>Акции и спецпредлождения</strong></a>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_service"><span>Сервис</span></div>
+								<div id="submenu_service" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_service">Назад</div>
+									<div class="al_menu-subheader">Сервис</div>
+									<a href="#" class="al_menu-item">Kia</a>
+									<a href="#" class="al_menu-item">Mazda</a>
+									<a href="#" class="al_menu-item">Skoda</a>
+									<a href="#" class="al_menu-item">Другие марки</a>
+									<a href="#" class="al_menu-item">Кузовной ремонт</a>
+								</div>
+							</div>							
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_goods"><span>Услуги</span></div>
+								<div id="submenu_goods" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_goods">Назад</div>
+									<div class="al_menu-subheader">Услуги</div>
+									<a href="#" class="al_menu-item">Детейлинг</a>
+									<a href="#" class="al_menu-item">Страхование</a>
+									<a href="#" class="al_menu-item">Кредитование</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_about"><span>О компании</span></div>
+								<div id="submenu_about" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_about">Назад</div>
+									<div class="al_menu-subheader">О компании</div>
+									<a href="#" class="al_menu-item">Отзывы</a>
+									<a href="#" class="al_menu-item">Вакансии</a>
+									<a href="#" class="al_menu-item">Контакты</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column is-desktop-only">
+								<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+								<span style="padding-bottom: 30px;">Единый<br>справочный телефон</span>
+								<a href="#" class="button al__button">Записаться на сервис</a>
+							</div>							
+							<div class="al_menu-wrapper al_direction-column is-mobile-only">
+								<div class="al_direction-row footer-contacts_mobile-version">
+									<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+									<div>
+										<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+										<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+									</div>						
+								</div>		
+								<a href="#" class="al__button al_mt40">Записаться на сервис</a>
+							</div>														
+						</div>
+					</div>
+					<div class="al_row">
+						<h5>Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Для получения подробной информации обращайтесь в наши автосалоны. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления. Политика конфиденциальности. «Правовая информация».</h5>
+					</div>
+				</div>
+
+				<div class="site-footer__footer">
+					<div class="al_row is-mobile-only">
+						<div class="al_column al_column-left al_pb30">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>							
+						</div>
+					</div>			
+					<div class="al_row">
+						<div class="al_column al_column-left">
+							<span>© Автолоцман, 2023</span>
+						</div>
+						<div class="al_column al_column-fw al_column-center is-desktop-only">
+							<div class="al_menu-wrapper al_direction-row">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>
+						</div>
+						<div class="al_column al_column-right">
+							<span>Дизайн Семь пап</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="preloader">
+	</div>
+
+	<script type="text/javascript">
+		paceOptions = {
+			ajax: true,
+			document: true,
+			eventLag: false
+		}
+		Pace.on('done', function() {			
+			$("#preloader").delay(500).animate({top: '-5000'}, 9000, $.bez([0.19, 1, 0.22, 1]))
+			
+			/*TweenMax.from(".title", 2, {
+				delay: 1,
+				y: 10,
+				opacity: 0,
+				ease: Expo.easeInOut
+			})*/
+			
+			TweenMax.to(".start-screen", 2, {
+				delay: 1.2,
+				height: 0,
+				ease: Expo.easeInOut
+			})			
+		})
+	</script>
+</body>
+
+
+</html>

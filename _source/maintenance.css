@@ -1,0 +1,37 @@
+.site-content__singup-to-maintenance .inner-wrapper {
+	background-color: #0E57C3;
+}
+.site-content__singup-to-maintenance .section-header {
+	color: #FFF;
+	text-align: center;
+	font-size: 44px;
+	font-weight: 700;
+	flex: 1;
+	padding-bottom: 160px;
+}
+.site-content__singup-to-maintenance .cars-brand {
+	margin-top: -80px;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.site-content__singup-to-maintenance .cars-brand span {
+	width: 220px;
+	height: 70px;
+}
+.site-content__singup-to-maintenance .footer {
+	border-top: 1px solid #ffffff15;
+	padding: 60px 0 60px 0;
+}
+.site-content__singup-to-maintenance .footer div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.singup-to-maintenance__wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.singup-to-maintenance__row {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,91 @@
+.accordion-wrapper {
+  padding-top: 100px;
+}
+.accordionjs {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.accordionjs .acc_section {
+  border: none;
+  position: relative;
+  z-index: 10;
+  margin-top: -1px;
+  overflow: hidden;
+}
+.accordionjs .acc_section .acc_head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #4A84D9;
+  font-family: Montserrat;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;    
+}
+.accordionjs .acc_section .acc_head span {
+  display: block;
+  color: #000;  
+}
+.accordionjs .acc_section .acc_head span:first-of-type {
+  padding: 60px 0 60px 0px;
+  border-bottom: 1px solid #4A84D9;
+}
+.accordionjs .acc_section .acc_head span:last-of-type {
+  background: url(images/accordion_plus.svg) 100% 50% no-repeat;
+  padding: 60px 60px 60px 160px;
+  border-bottom: 1px solid #E0E0E0;
+  flex: 1;
+}
+.accordionjs .acc_section .acc_head h3 {
+  line-height: 1;
+  margin: 5px 0;
+}
+.accordionjs .acc_section .acc_content {
+  padding: 10px;
+}
+.accordionjs .acc_section.acc_active > .acc_content {
+  display: block;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 80px;
+}
+.accordionjs .acc_section.acc_active > .acc_head span:first-of-type {
+  border-bottom: none;
+}
+.accordionjs .acc_section.acc_active > .acc_head span:last-of-type {
+  background: url(images/accordion_minus.svg) 100% 50% no-repeat;
+  border-bottom: none;
+  color: #4A84D9;
+}
+.accordionjs .acc_section .acc_head:hover span {
+  color: #4A84D9;
+}
+.accordionjs .acc_section > .acc_head:hover span:last-of-type {
+  background: url(images/accordion_plus_hover.svg) 100% 50% no-repeat;
+}
+.accordionjs .acc_section.acc_active > .acc_head:hover span:last-of-type {
+  background: url(images/accordion_minus_hover.svg) 100% 50% no-repeat;
+}
+.accordionjs .acc_section:not(.acc_active) .acc_head:after,
+.accordionjs .acc_section:not(.acc_active) .acc_head:before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-bottom: solid 1px #4A84D9;
+  transform: scaleX(0);
+  transition: transform 350ms ease-in-out;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.accordionjs .acc_section:not(.acc_active) .acc_head:hover:after {
+  transform: scaleX(1); 
+  transform-origin:  0% 50%; 
+}
+

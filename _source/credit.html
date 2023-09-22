@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="form.select.js"></script>
+	<script src="form.range.js"></script>
+    <script src="jquery.bez.min.js"></script>
+	<script src="jquery.spincrement.min.js"></script>
+	<script src="jquery.accordion.min.js"></script>
+	<script src="template.base.js"></script>
+	<script src="template.inner.js"></script>
+	<script src="template.detailing.js"></script>
+    <!-- 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">	
+	<link rel="stylesheet" href="minimal.css">
+	-->
+	<link rel="stylesheet" href="bulma.min.css">
+	<link rel="stylesheet" href="bulma.custom.css">
+	<link rel="stylesheet" href="form.select.css">
+	<link rel="stylesheet" href="form.range.css">		
+	<link rel="stylesheet" href="swiper-bundle.min.css">		
+	<link rel="stylesheet" href="accordion.css">
+	<link rel="stylesheet" href="credit.css">		
+	<link rel="stylesheet" href="inner.css">	
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="custom-1366.css">
+	<link rel="stylesheet" href="custom-360.css">
+	<title>Автолоцман</title>
+</head>
+
+<body class="layout-inner inner-two">
+	<div class="site-wrapper">		
+		<div class="start-screen"><div class="brand-image"></div></div>
+		<div class="site-header al_container p-0">
+			<div class="site-header__background background-credit" style="background-image:url(images/credit/header.jpg)"></div>
+			<div class="site-header__overlay"></div>
+			<div class="site-header__suboverlay is-mobile-only"></div>
+			<div class="navbar__background"></div>
+			<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="https://bulma.io">
+					  <img src="images/logo.svg" width="160" height="40">
+					</a>
+
+					<a href="#" class="link__button-call is-mobile-only" style="align-items: center;">
+						<i class="al_icon al_icon-call" style="margin-left: -15px; width: 22px; height: 22px;"></i>
+					</a>
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					</a>
+				</div>
+				<div id="navbarBasic" class="navbar-menu">
+					<div class="navbar-start">
+					
+						<div class="navbar-item has-dropdown">
+							<a class="navbar-link is-arrowless">
+								Каталог автомобилей
+							</a>
+
+							<div class="navbar-dropdown">
+								<a class="navbar-item">
+									Новые автомобили
+								</a>
+								<a class="navbar-item">
+									Автомобили с пробегом
+								</a>
+							</div>
+						</div>
+					
+						<a class="navbar-item">
+							Сервис
+						</a>
+
+						<a class="navbar-item">
+							Услуги
+						</a>
+					  
+						<a class="navbar-item">
+							Акции
+						</a>
+					
+						<a class="navbar-item">
+							О компании
+						</a>
+					</div>
+
+					<div class="navbar-end">
+					  <div class="navbar-item pr-0">
+						<div class="right-buttons-block">
+						  <a href="#" class="link__button-service">
+							<i class="al_icon al_icon-service"></i>Записаться на сервис
+						  </a>
+						  <a href="#" class="link__button-call">
+							<i class="al_icon al_icon-call"></i>Заказать звонок
+						  </a>
+						  <a href="#" class="link__button-phone">
+							8 (8412) 929-111
+						  </a>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</nav>
+			<div class="site-header__content-wrapper al_container is-fullhd is-flex is-flex-direction-column">
+				<h1 class="site-header__h1">Кредитование</h1>
+				<h2 class="site-header__h2">В дилерских центрах «Автолоцман» Вы можете воспользоваться автокредитом на выгодных условиях</h2>
+			</div>			
+		</div>
+		<div class="site-content">
+			<section class="site-content__welcome">
+				<div class="al_container credit-specialist">
+					<div class="al_row">
+						<div class="al_column al_column-middle">
+							<h3 class="section-description">
+								Специалист группы компаний «Автолоцман» по кредитованию и страхованию Котунова Алена ответила на самые частые вопросы клиентов 
+							</h3>
+						</div>
+						<div class="al_column al_column-right">
+							<img src="images/credit/specialist.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="al_container swiper inner-swiper">
+					<div class="inner-swiper__navigation">
+						<a href="#" class="inner-swiper__arrow-left al_icon al_icon-m al_icon-left"></a>
+						<a href="#" class="inner-swiper__arrow-right al_icon al_icon-m al_icon-right"></a>
+					</div>
+					<ul class="inner-swiper__wrapper swiper-wrapper al_row">
+						<li class="inner-swiper__slide" style="background-image: url(images/credit/mazda_credit.png);">
+							<h2 class="inner-swiper__header">Mazda кредит лайт</h2>
+							<h6 class="inner-swiper__subheader">						
+								Кредитная программа позволяет приобрести<br>
+								желаемый автомобиль с минимальным <br>
+								ежемесячным платежом.<br>
+							</h6>
+							<a href="#" class="inner-swiper__button al__button">Записаться на сервис</a>
+						</li>
+					</ul>
+				</div>	
+			</section>
+			<section class="site-content__inner credit-content__wrapper">
+				<div class="al_container al_container__gray">
+					<div class="al_row">
+						<div class="al_column sidebar al_direction-column">
+							<div class="al_row credit-content__sidebar">
+								<img src="images/user.svg" alt="Помощь специалиста" />
+								<h6>Наш специалист в кратчайшие сроки свяжется с вами</h6>
+							</div>
+							<a href="#" class="al__button">Заказать обратный звонок</a>
+						</div>
+						<div class="al_column">
+							<div class="faq__wrapper">
+								<ul class="faq__list">
+									<li class="faq__list-item">
+										<h6 class="faq__question">Какие автомобили можно оформить в кредит?</h6>
+										<div class="faq__answer">Кредитование осуществляется как на новые автомобили, так и на автомобили с пробегом.</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Какой первоначальный взнос?</h6>
+										<div class="faq__answer">Можно и без первоначального взноса. Все зависит от вашей кредитной истории.</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Какая процентная ставка?</h6>
+										<div class="faq__answer">Минимальная ставка от 8,9%</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">С какими банками работаете?</h6>
+										<div class="faq__answer">Работаем со всеми банками, представленными на территории Пензенской области</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">По каким документам можно подать заявку?</h6>
+										<div class="faq__answer">Для подачи заявки необходимо 2 документа: паспорт и водительское удостоверение или Снилс</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Нужно ли оформлять КАСКО при кредитовании?</h6>
+										<div class="faq__answer">Для новых автомобилей - это обязательное условие банка. Для автомобилей с пробегом - по желанию клиента.</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Как быстро одобряют заявку?</h6>
+										<div class="faq__answer">Все зависит от загруженности банка. В среднем от 15 минут до 2 часов.</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Какой срок кредитования?</h6>
+										<div class="faq__answer">От 1 года до 8 лет</div>
+									</li>
+									<li class="faq__list-item">
+										<h6 class="faq__question">Как подать заявку?</h6>
+										<div class="faq__answer">Лично в нашем дилерском центре или по телефону 929-111</div>
+									</li>																																																																								
+								</ul>
+								<div class="faq__infoblock">
+									<div class="part_one">Наши специалисты расскажут о самых выгодных предложениях банков и помогут подобрать оптимальную программу кредитования.</div>
+									<div class="part_two">Ждем вас по адресу Проспект Победы, 53, тел.: 929-111</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>					
+		</div>
+		<div class="site-footer">
+			<div class="al_container site-footer__wrapper">
+				<div class="site-footer__header">
+					<a href="#" class="footer-logo">
+						<img src="images/logo_footer.svg" alt="Автолоцман" />
+					</a>
+					<div class="is-desktop-only">
+						<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+						<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+					</div>
+				</div>
+				<div class="site-footer__content al_pt40">
+					<div class="al_row">
+						<div class="al_column al_column-4 al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item"><strong>Новые автомобили</strong></a>
+								<a href="#" class="al_menu-item"><strong>Автомобили с пробегом</strong></a>
+								<a href="#" class="al_menu-item"><strong>Акции и спецпредлождения</strong></a>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_service"><span>Сервис</span></div>
+								<div id="submenu_service" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_service">Назад</div>
+									<div class="al_menu-subheader">Сервис</div>
+									<a href="#" class="al_menu-item">Kia</a>
+									<a href="#" class="al_menu-item">Mazda</a>
+									<a href="#" class="al_menu-item">Skoda</a>
+									<a href="#" class="al_menu-item">Другие марки</a>
+									<a href="#" class="al_menu-item">Кузовной ремонт</a>
+								</div>
+							</div>							
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_goods"><span>Услуги</span></div>
+								<div id="submenu_goods" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_goods">Назад</div>
+									<div class="al_menu-subheader">Услуги</div>
+									<a href="#" class="al_menu-item">Детейлинг</a>
+									<a href="#" class="al_menu-item">Страхование</a>
+									<a href="#" class="al_menu-item">Кредитование</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_about"><span>О компании</span></div>
+								<div id="submenu_about" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_about">Назад</div>
+									<div class="al_menu-subheader">О компании</div>
+									<a href="#" class="al_menu-item">Отзывы</a>
+									<a href="#" class="al_menu-item">Вакансии</a>
+									<a href="#" class="al_menu-item">Контакты</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column is-desktop-only">
+								<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+								<span style="padding-bottom: 30px;">Единый<br>справочный телефон</span>
+								<a href="#" class="button al__button">Записаться на сервис</a>
+							</div>							
+							<div class="al_menu-wrapper al_direction-column is-mobile-only">
+								<div class="al_direction-row footer-contacts_mobile-version">
+									<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+									<div>
+										<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+										<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+									</div>						
+								</div>		
+								<a href="#" class="al__button al_mt40">Записаться на сервис</a>
+							</div>														
+						</div>
+					</div>
+					<div class="al_row">
+						<h5>Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Для получения подробной информации обращайтесь в наши автосалоны. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления. Политика конфиденциальности. «Правовая информация».</h5>
+					</div>
+				</div>
+
+				<div class="site-footer__footer">
+					<div class="al_row is-mobile-only">
+						<div class="al_column al_column-left al_pb30">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>							
+						</div>
+					</div>			
+					<div class="al_row">
+						<div class="al_column al_column-left">
+							<span>© Автолоцман, 2023</span>
+						</div>
+						<div class="al_column al_column-fw al_column-center is-desktop-only">
+							<div class="al_menu-wrapper al_direction-row">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>
+						</div>
+						<div class="al_column al_column-right">
+							<span>Дизайн Семь пап</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="preloader">
+	</div>
+
+	<script type="text/javascript">
+		paceOptions = {
+			ajax: true,
+			document: true,
+			eventLag: false
+		}
+		Pace.on('done', function() {			
+			$("#preloader").delay(500).animate({top: '-5000'}, 9000, $.bez([0.19, 1, 0.22, 1]))
+			
+			/*TweenMax.from(".title", 2, {
+				delay: 1,
+				y: 10,
+				opacity: 0,
+				ease: Expo.easeInOut
+			})*/
+			
+			TweenMax.to(".start-screen", 2, {
+				delay: 1.2,
+				height: 0,
+				ease: Expo.easeInOut
+			})			
+		})
+	</script>
+</body>
+
+
+</html>

@@ -1,0 +1,28 @@
+.credit-specialist .al_row {
+	padding: 120px 0 120px 0 !important;
+}
+.credit-specialist h3 {
+	color: #030303 !important;
+	font-size: 30px !important;
+	font-style: normal;
+	font-weight: 500 !important;
+	line-height: normal;
+}
+.credit-specialist img {
+	width: 420px;
+	height: 420px;
+}
+.credit-content__wrapper {
+	padding-top: 120px;
+}
+.credit-content__wrapper img {
+	width: 60px;
+	height: 60px;
+}
+.credit-content__sidebar h6 {
+	color: #030303;
+	font-size: 24px;
+	font-weight: 500;
+	padding-left: 30px;
+	padding-bottom: 40px;
+}

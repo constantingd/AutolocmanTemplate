@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="form.select.js"></script>
+	<script src="form.range.js"></script>
+    <script src="jquery.bez.min.js"></script>
+	<script src="jquery.spincrement.min.js"></script>
+	<script src="template.base.js"></script>
+	<script src="template.main.js"></script>
+    <!-- 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">	
+	<link rel="stylesheet" href="minimal.css">
+	-->
+	<link rel="stylesheet" href="bulma.min.css">
+	<link rel="stylesheet" href="bulma.custom.css">
+	<link rel="stylesheet" href="form.select.css">
+	<link rel="stylesheet" href="form.range.css">		
+	<link rel="stylesheet" href="swiper-bundle.min.css">		
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="custom-1366.css">
+	<link rel="stylesheet" href="custom-360.css">	
+	<title>Автолоцман</title>
+</head>
+
+<body class="layout-main">
+	<div class="site-wrapper">		
+		<div class="start-screen"><div class="brand-image"></div></div>
+		<div class="site-header al_container p-0">
+			<video autoplay muted loop>
+				<source src="video/header_video_compressed.mp4" type="video/mp4" />
+			</video>
+			<div class="site-header__overlay"></div>
+			<div class="site-header__suboverlay is-mobile-only"></div>
+			<div class="navbar__background"></div>
+			<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="https://bulma.io">
+					  <img src="images/logo.svg" width="160" height="40">
+					</a>
+
+					<a href="#" class="link__button-call is-mobile-only" style="align-items: center;">
+						<i class="al_icon al_icon-call" style="margin-left: -15px; width: 22px; height: 22px;"></i>
+					</a>
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					  <span aria-hidden="true"></span>
+					</a>
+				</div>
+				<div id="navbarBasic" class="navbar-menu">
+					<div class="navbar-start">
+					
+						<div class="navbar-item has-dropdown">
+							<a class="navbar-link is-arrowless">
+								Каталог автомобилей
+							</a>
+
+							<div class="navbar-dropdown">
+								<a class="navbar-item">
+									Новые автомобили
+								</a>
+								<a class="navbar-item">
+									Автомобили с пробегом
+								</a>
+							</div>
+						</div>
+					
+						<a class="navbar-item">
+							Сервис
+						</a>
+
+						<a class="navbar-item">
+							Услуги
+						</a>
+					  
+						<a class="navbar-item">
+							Акции
+						</a>
+					
+						<a class="navbar-item">
+							О компании
+						</a>
+					</div>
+
+					<div class="navbar-end">
+					  <div class="navbar-item pr-0">
+						<div class="right-buttons-block">
+						  <a href="#" class="link__button-service">
+							<i class="al_icon al_icon-service"></i>Записаться на сервис
+						  </a>
+						  <a href="#" class="link__button-call">
+							<i class="al_icon al_icon-call"></i>Заказать звонок
+						  </a>
+						  <a href="#" class="link__button-phone">
+							8 (8412) 929-111
+						  </a>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</nav>
+			<div class="site-header__content-wrapper al_container is-fullhd is-flex is-flex-direction-column">
+				<h1 class="site-header__h1">Подберем автомобиль</h1>
+				<h2 class="site-header__h2">Специально для вас и ваших требований</h2>
+				<div class="site-header__filter-wrapper is-flex">
+					<label id="brand_category_label"class="filter-select field is-flex-grow-1 is-flex-basis-0"for="brand_category"data-value="">
+						<span>Марка</span>
+						<div id="brand_category"class="psuedo_select"name="brand_category">
+							<span class="selected"></span>
+							<ul id="brand_category_options"class="options">
+								<li class="option"data-value="opt_1">Mazda</li>
+								<li class="option"data-value="opt_2">KIA</li>
+								<li class="option"data-value="opt_2">Skoda</li>
+								<li class="option"data-value="opt_2">Livan</li>
+							</ul>
+						</div>
+					</label>
+					
+					<label id="model_category_label"class="filter-select field is-flex-grow-1 is-flex-basis-0"for="model_category"data-value="">
+						<span>Модель</span>
+						<div id="model_category"class="psuedo_select"name="model_category">
+							<span class="selected"></span>
+							<ul id="model_category_options"class="options">
+								<li class="option"data-value="opt_1">Option 1</li>
+								<li class="option"data-value="opt_2">Option 2</li>
+							</ul>
+						</div>
+					</label>
+
+					<label id="acc_category_label"class="filter-select field is-flex-grow-1 is-flex-basis-0"for="acc_category"data-value="">
+						<span>КПП</span>
+						<div id="acc_category"class="psuedo_select"name="acc_category">
+							<span class="selected"></span>
+							<ul id="acc_category_options"class="options">
+								<li class="option"data-value="opt_1">Механика</li>
+								<li class="option"data-value="opt_2">Автомат</li>
+								<li class="option"data-value="opt_2">Робот</li>
+								<li class="option"data-value="opt_2">Вариатор</li>
+							</ul>
+						</div>
+					</label>
+
+					<label id="transmission_category_label"class="filter-select field is-flex-grow-1 is-flex-basis-0"for="transmission_category"data-value="">
+						<span>Привод</span>
+						<div id="engcategory"class="psuedo_select"name="transmission_category">
+							<span class="selected"></span>
+							<ul id="transmission_category_options"class="options">
+								<li class="option"data-value="opt_1">Передний</li>
+								<li class="option"data-value="opt_2">Задний</li>
+								<li class="option"data-value="opt_2">Полный</li>
+							</ul>
+						</div>
+					</label>	
+ 
+					<div class="filter-slider slider-container is-flex-grow-1 is-flex-basis-0">
+						<div class="row slider-labels">
+							<div class="col-xs-6 caption">
+							  <span>от </span> <span id="slider-range-value1"></span>
+							</div>
+							<div class="col-xs-6 text-right caption">
+							  <span>до </span> <span id="slider-range-value2"></span>
+							</div>
+						</div>
+						<div class="row">
+						  <div class="col-sm-12">
+							<div id="slider-range"></div>
+						  </div>
+						</div>
+						<div class="row">
+						  <div class="col-sm-12">
+							<form>
+							  <input type="hidden" name="min-value" value="">
+							  <input type="hidden" name="max-value" value="">
+							</form>
+						  </div>
+						</div>
+					</div>
+
+					<button class="filter-button is-flex-grow-1 is-flex-basis-0">Поиск авто</button>
+				</div>
+				<div class="site-header__filter-wrapper-mobile is-mobile-only">
+					<a href="#" class="al__button al_blue al_wz100">Поиск авто</a>
+				</div>
+				<div class="site-header__organisations">
+					<h3 class="site-header__organisations-title">Официальный<br />дилер</h3>
+					<a href="#" class="al_icon al_icon-xxl al_icon-kia is-desktop-only"></a>
+					<a href="#" class="al_icon al_icon-xxl al_icon-livan is-desktop-only al_ml60"></a>
+					<div class="is-mobile-only al_row">
+						<div class="al_column al_column-left"><a href="#" class="al_icon al_icon-xl al_icon-kia-dark"></a></div>
+						<div class="al_column al_column-left"><a href="#" class="al_icon al_icon-xl al_icon-livan-dark"></a></div>
+					</div>
+					<span class="is-flex-grow-1 has-text-right"></span>
+					<h3 class="site-header__organisations-title">Официальный<br />сервис</h3>
+					<a href="#" class="al_icon al_icon-xxl al_icon-mazda is-desktop-only"></a>
+					<a href="#" class="al_icon al_icon-xxl al_icon-skoda is-desktop-only al_ml60"></a>
+					<div class="is-mobile-only al_row">
+						<div class="al_column al_column-left"><a href="#" class="al_icon al_icon-xl al_icon-mazda-dark is-mobile-only"></a></div>
+						<div class="al_column al_column-left"><a href="#" class="al_icon al_icon-xl al_icon-skoda-dark is-mobile-only"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="site-content">
+			<section class="site-content__cars-available">
+				<div class="al_container">
+					<h2 class="section-header"><span class="al_color-blue">Более 50 новых</span> автомобилей в наличии</h2>
+					<div class="section-subheader">
+						<a href="#">Весь каталог</a>
+						<a href="#" class="swiper__slider-arrow-left al_icon al_icon-m al_icon-left"></a>
+						<a href="#" class="swiper__slider-arrow-right al_icon al_icon-m al_icon-right"></a>
+					</div>
+				</div>
+				<div class="al_container__fluid swiper">
+					<ul class="cars-available__slider swiper-wrapper al_row">
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/mazda_dark.svg" alt="Автомобилей Mazda доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/kia_dark.svg" alt="Автомобилей KIA доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/skoda_dark.svg" alt="Автомобилей Skoda доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>						
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/hyundai_dark.svg" alt="Автомобилей Hyundai доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/mitsubishi_dark.svg" alt="Автомобилей Mitsubishi доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>
+						<li class="cars-available-slide swiper-slide">
+							<a href="#" class="cars-available__slider-item-wrapper">
+								<div class="cars-available__slider-item al_column al_direction-column">
+									<img src="images/livan_dark.svg" alt="Автомобилей Livan доступно" />
+									<p><span class="al_color-blue">27</span> автомобилей</p>
+								</div>
+							</a>
+						</li>																														
+					</ul>
+				</div>				
+			</section>
+			<section class="site-content__used-cars al_container__gray">
+				<div class="al_container">
+					<h2 class="section-header">Автомобили c пробегом</h2>
+					<div class="section-subheader is-desktop-only">
+						<a href="#">Весь каталог</a>
+					</div>					
+				</div>
+				<div class="al_container cars-catalog__wrapper used-cars__wrapper">
+					<div class="cars__single-item used-cars">
+						<div class="header">
+							<img src="images/used/52ba564908939b1a73e2c10879d08519.png" />
+						</div>
+						<div class="description">
+							<h4 class="brand">Toyota</h4>
+							<h3 class="model">Rav 4, 2018</h3>
+							<span class="properties">
+								1.6 л / 123 л.с. / бензин / механическая / передний привод
+							</span>
+						</div>
+						<div class="footer">
+							<span class="price">2 725 000 ₽</span>
+							<a href="#" class="select-car al_icon al_icon-m al_icon-right"></a>
+						</div>
+					</div>
+					<div class="cars__single-item used-cars">
+						<div class="header">
+							<img src="images/used/8cac70636e76b201e7e620cda7be9729.png" />
+						</div>
+						<div class="description">
+							<h4 class="brand">Kia</h4>
+							<h3 class="model">Rio, 2020</h3>
+							<span class="properties">
+								1.6 л / 123 л.с. / бензин / механическая / передний привод
+							</span>
+						</div>
+						<div class="footer">
+							<span class="price">2 725 000 ₽</span>
+							<a href="#" class="select-car al_icon al_icon-m al_icon-right"></a>
+						</div>
+					</div>
+					<div class="cars__single-item used-cars">
+						<div class="header">
+							<img src="images/used/40035ee132c413612bc5aac504ac0898.png" />
+						</div>
+						<div class="description">
+							<h4 class="brand">Audi</h4>
+							<h3 class="model">Q5, 2019</h3>
+							<span class="properties">
+								1.6 л / 123 л.с. / бензин / механическая / передний привод
+							</span>
+						</div>
+						<div class="footer">
+							<span class="price">2 725 000 ₽</span>
+							<a href="#" class="select-car al_icon al_icon-m al_icon-right"></a>
+						</div>
+					</div>
+					<div class="cars__single-item info">
+						<div class="header">
+							<h2>Более 150</h2>
+							<h3>Проверенных автомобилей с пробегом</h3>
+						</div>
+						<div class="footer">
+							<a href="#" class="button al__button">Все автомобили</a>
+						</div>
+					</div>															
+				</div>
+			</section>			
+			<section class="site-content__singup-to-maintenance al_container__gray">
+				<div class="al_container">
+					<div class="inner-wrapper singup-to-maintenance__wrapper">
+						<h2 class="section-header">Записаться на техническое обслуживание</h2>
+						<div class="singup-to-maintenance__row al_bg-color-gray">
+							<div class="cars-brand">
+								<img src="images/service/service_kia.png" />
+								<span class="al_icon al_icon-kia"></span>
+							</div>
+							<div class="cars-brand">
+								<img src="images/service/service_livan.png" />
+								<span class="al_icon al_icon-skoda"></span>												
+							</div>
+							<div class="cars-brand">
+								<img src="images/service/service_mazda.png" />
+								<span class="al_icon al_icon-mazda"></span>
+							</div>														
+							<div class="cars-brand">
+								<img src="images/service/service_skoda.png" />
+								<span class="al_icon al_icon-livan"></span>
+							</div>
+						</div>
+						<div class="footer singup-to-maintenance__row al_bg-color-gray">
+							<div>
+								<span class="al_iconed-text"><i class="al_icon al_icon-xl al_icon-checklist"></i>Выгодное соотношение<br>цены и качества</span>									
+							</div>
+							<div>
+								<span class="al_iconed-text"><i class="al_icon al_icon-xl al_icon-engine"></i>Запчасти от разных<br>производителей</span>									
+							</div>								
+							<div>
+								<span class="al_iconed-text"><i class="al_icon al_icon-xl al_icon-sale"></i>Более 15 лет в сфере<br>обслуживания автомобилей</span>									
+							</div>
+							<div class="has-text-centered">
+								<a href="#" class="button al__button">Записаться на сервис</a>								
+							</div>
+						</div>						
+					</div>
+				</div>
+			</section>
+			<section class="site-content__special-offers al_container__gray">
+				<div class="al_container">
+					<h2 class="section-header">Акции и спецпредложения</h2>
+					<div class="section-subheader">
+						<a href="#">Все акции</a>
+					</div>					
+				</div>
+				<div class="al_container special-offers__wrapper">
+					<a href="" class="special-offer">
+						<div class="special-offer__background" style="background-image: url('images/offers/offer_1.png');"></div>						
+						<div class="special-offer__overflow"></div>						
+						<div class="special-offer__text-background"></div>
+						<div class="special-offer__text">Продлеваем гарантию</div>
+					</a>
+					<a href="" class="special-offer">
+						<div class="special-offer__background" style="background-image: url('images/offers/offer_2.png');"></div>						
+						<div class="special-offer__overflow"></div>						
+						<div class="special-offer__text-background"></div>
+						<div class="special-offer__text">Удалим вмятины со скидкой 20% и дарим полировку</div>
+					</a>
+					<a href="" class="special-offer">
+						<div class="special-offer__background" style="background-image: url('images/offers/offer_3.png');"></div>						
+						<div class="special-offer__overflow"></div>						
+						<div class="special-offer__text-background"></div>
+						<div class="special-offer__text">Скидка 10% на работу, для автомобилей старше 3 лет</div>
+					</a>									
+				</div>
+				<div class="al_container is-mobile-only">
+					<a href="#" class="button al__button" style="width: 100%;">Все акции</a>
+				</div>
+			</section>
+			<section class="site-content__reviews al_container__gray">
+				<div class="al_container">
+					<div class="reviews-description">
+						<h2 class="section-header">Отзывы</h2>
+						<div class="reviews-description__text">
+							Мы открытая компания, поэтому свободно делимся отзывами о нас, как хорошими так и не очень, ведь нет идеального в этом мире, но мы работаем над этим :)
+						</div>
+						<a href="#" class="button al__button is-desktop-only">Записаться на сервис</a>
+					</div>
+					<div class="reviews__data">
+						<div class="reviews__data-item">
+							<span class="left-part" data-from="0" data-to="109">0</span>
+							<span class="right-part">ОТЗЫВОВ<br />НА <b>Яндекс</b></span>
+						</div>
+						<div class="reviews__data-item is-desktop-only">
+							<span class="left-part" data-from="0" data-to="108">0</span>
+							<span class="right-part">ОЦЕНОК</span>
+						</div>
+						<div class="reviews__data-item is-desktop-only">
+							<span class="left-part" data-from="0" data-to="4.3" data-dp="1">0</span>
+							<span class="right-part">РЕЙТИНГ</span>
+						</div>		
+						<div class="reviews__data-item is-desktop-only">
+							<span>Поделитесь отзывами о работе автотехцентра</span>
+							<span><a href="#" class="al_icon al_icon-m al_icon-right"></a></span>
+						</div>																
+					</div>				
+				</div>
+				<div class="al_container is-mobile-only">
+					<a href="#" class="button al__button" style="width: 100%;">Читать все отзывы на Яндекс</a>
+				</div>				
+			</section>			
+			<section class="site-content__professionals professionals">
+				<div class="al_container is-flex-direction-column is-align-items-flex-start">
+					<h2 class="professionals-header">Доверь поиск автомобиля<br />профессионалам</h2>
+					<span class="professionals-description">Отправь заявку и мы пришлем лучшее<br />предложение до конца дня</span>
+					<a href="#" class="button al__button">Записаться на сервис</a>
+				</div>
+			</section>			
+			<section class="site-content__services">
+				<div class="al_container">
+					<h2 class="section-header">Услуги автотехцентра</h2>
+					<div class="section-subheader">
+						<a href="#">Все услуги</a>
+					</div>						
+				</div>
+				<div class="al_container">
+					<div class="services__slider-wrapper">
+						<a href="#" class="service-item al__card all-height">
+							<i class="al_icon al_icon-xl al_icon-credit al_mb40"></i>
+							<h3 class="service-item__content">Подберем удобные для вас условия</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Кредит</span>
+							</div>
+						</a>
+						<a href="#" class="service-item al__card">
+							<h3 class="service-item__content">Застрахуем от неприятных сюрпризов на дороге</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Страхование</span>
+							</div>
+						</a>
+						<a href="#" class="service-item al__card">
+							<h3 class="service-item__content">Лизинг для Вашего бизнеса</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Лизинг</span>
+							</div>
+						</a>
+						<a href="#" class="service-item al__card all-height">
+							<i class="al_icon al_icon-xl al_icon-helm al_mb40"></i>
+							<h3 class="service-item__content">Подберем удобные для вас условия</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Тест-драйв</span>
+							</div>
+						</a>
+						<a href="#" class="service-item al__card">
+							<h3 class="service-item__content">Обменяем ваш автомобиль на хороших условиях</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Trade-in</span>
+							</div>
+						</a>
+						<a href="#" class="service-item al__card">
+							<h3 class="service-item__content">Интересные программы для корпоративных клиентов</h3>
+							<div class="service-item__footer">
+								<i class="al_icon al_icon-m al_icon-right-blue"></i>
+								<span>Программа</span>
+							</div>
+						</a>																														
+					</div>
+				</div>
+				<div class="al_container is-mobile-only">
+					<a href="#" class="button al__button" style="width: 100%;">Все услуги</a>
+				</div>
+			</section>			
+			<section class="site-content__about">
+				<div class="al_container site-content__about-wrapper">
+					<a href="#" class="about-item">
+						<div class="about-item__background" style="background-image: url('images/about/image_001.jpg');"></div>
+						<div class="about-item__text">Более 150 пунктов проверки<br />автомобиля</div>
+						<div class="about-item__subtext">Автомобили с пробегом</div>
+					</a>
+					<a href="#" class="about-item is-desktop-only">
+						<div class="about-item__background" style="background-image: url('images/about/image_002.jpg');"></div>
+						<div class="about-item__text">Быстрый обмен вашего автомобиля на новый<br />или с пробегом</div>
+						<div class="about-item__subtext">Trade-in</div>
+					</a>									
+				</div>	
+				<div class="al_container">
+					<h2 class="site-content__about-header">Автолоцман</h2>
+
+					<div class="site-content__about-text">
+						<h2 class="site-content__about-subheader">
+							Мультибрендовый автомобильный салон, существует с 2000 года.
+						</h2>
+						<p>
+							Небольшой текстик рассказывающий о компании с преходим в подробное описание, сколько лет, когда создан, сколько счастливых клиентов и так далее. Небольшой текстик рассказывающий о компании с преходим в подробное описание, сколько лет, когда создан, сколько счастливых клиентов и так далее. Небольшой текстик рассказывающий о компании с преходим в подробное описание, сколько лет, когда создан, сколько счастливых клиентов и так далее. 
+							<a href="#">Узнать больше</a>
+						</p>
+					</div>
+				</div>			
+			</section>			
+		</div>
+		<div class="site-footer">
+			<div class="al_container site-footer__wrapper">
+				<div class="site-footer__header">
+					<a href="#" class="footer-logo">
+						<img src="images/logo_footer.svg" alt="Автолоцман" />
+					</a>
+					<div class="is-desktop-only">
+						<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+						<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+					</div>
+				</div>
+				<div class="site-footer__content al_pt40">
+					<div class="al_row">
+						<div class="al_column al_column-4 al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item"><strong>Новые автомобили</strong></a>
+								<a href="#" class="al_menu-item"><strong>Автомобили с пробегом</strong></a>
+								<a href="#" class="al_menu-item"><strong>Акции и спецпредлождения</strong></a>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_service"><span>Сервис</span></div>
+								<div id="submenu_service" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_service">Назад</div>
+									<div class="al_menu-subheader">Сервис</div>
+									<a href="#" class="al_menu-item">Kia</a>
+									<a href="#" class="al_menu-item">Mazda</a>
+									<a href="#" class="al_menu-item">Skoda</a>
+									<a href="#" class="al_menu-item">Другие марки</a>
+									<a href="#" class="al_menu-item">Кузовной ремонт</a>
+								</div>
+							</div>							
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_goods"><span>Услуги</span></div>
+								<div id="submenu_goods" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_goods">Назад</div>
+									<div class="al_menu-subheader">Услуги</div>
+									<a href="#" class="al_menu-item">Детейлинг</a>
+									<a href="#" class="al_menu-item">Страхование</a>
+									<a href="#" class="al_menu-item">Кредитование</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column">
+								<div class="al_menu-header al_menu-switcher" data-target="submenu_about"><span>О компании</span></div>
+								<div id="submenu_about" class="al_menu-submenu al_direction-column">
+									<div class="al_menu-submenu-back" data-target="submenu_about">Назад</div>
+									<div class="al_menu-subheader">О компании</div>
+									<a href="#" class="al_menu-item">Отзывы</a>
+									<a href="#" class="al_menu-item">Вакансии</a>
+									<a href="#" class="al_menu-item">Контакты</a>
+								</div>
+							</div>
+						</div>
+						<div class="al_column al_column-left">
+							<div class="al_menu-wrapper al_direction-column is-desktop-only">
+								<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+								<span style="padding-bottom: 30px;">Единый<br>справочный телефон</span>
+								<a href="#" class="button al__button">Записаться на сервис</a>
+							</div>							
+							<div class="al_menu-wrapper al_direction-column is-mobile-only">
+								<div class="al_direction-row footer-contacts_mobile-version">
+									<a class="footer-phone" href="tel:88412929111">8 (8412) 929-111</a>
+									<div>
+										<a href="#" class="al_icon al_icon-m al_icon-vk">ВКонтакте</a>
+										<a href="#" class="al_icon al_icon-m al_icon-youtube">Youtube</a>
+									</div>						
+								</div>		
+								<a href="#" class="al__button al_mt40">Записаться на сервис</a>
+							</div>														
+						</div>
+					</div>
+					<div class="al_row">
+						<h5>Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Для получения подробной информации обращайтесь в наши автосалоны. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления. Политика конфиденциальности. «Правовая информация».</h5>
+					</div>
+				</div>
+
+				<div class="site-footer__footer">
+					<div class="al_row is-mobile-only">
+						<div class="al_column al_column-left al_pb30">
+							<div class="al_menu-wrapper al_direction-column">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>							
+						</div>
+					</div>			
+					<div class="al_row">
+						<div class="al_column al_column-left">
+							<span>© Автолоцман, 2023</span>
+						</div>
+						<div class="al_column al_column-fw al_column-center is-desktop-only">
+							<div class="al_menu-wrapper al_direction-row">
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Правовая информация</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Обработка персональных данных</a>
+								<a href="#" class="al_menu-item al_pl0 al_pt0 borderless">Политика конфиденциальности</a>
+							</div>
+						</div>
+						<div class="al_column al_column-right">
+							<span>Дизайн Семь пап</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="preloader">
+	</div>
+
+	<script type="text/javascript">
+		paceOptions = {
+			ajax: true,
+			document: true,
+			eventLag: false
+		}
+		Pace.on('done', function() {			
+			$("#preloader").delay(500).animate({top: '-5000'}, 9000, $.bez([0.19, 1, 0.22, 1]))
+			
+			/*TweenMax.from(".title", 2, {
+				delay: 1,
+				y: 10,
+				opacity: 0,
+				ease: Expo.easeInOut
+			})*/
+			
+			TweenMax.to(".start-screen", 2, {
+				delay: 1.2,
+				height: 0,
+				ease: Expo.easeInOut
+			})			
+		})
+	</script>
+</body>
+
+
+</html>

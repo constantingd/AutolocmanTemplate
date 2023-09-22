@@ -1,0 +1,59 @@
+.special-offers__wrapper {
+	display: flex;
+	padding-top: 80px;
+}
+.special-offers__wrapper .special-offer {
+	display: block;
+	position: relative;
+	flex: 1;
+	height: 700px;
+}
+.special-offer .special-offer__background,
+.special-offer .special-offer__overflow {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;	
+}
+.special-offer .special-offer__overflow {
+	opacity: 0.4;
+	background: #030303;
+	bottom: 0;
+	transition: opacity 0.3s ease-out;
+	transition: bottom 0.35s ease-out;
+}
+.special-offer:hover .special-offer__overflow {
+	opacity: 0;
+	bottom: 100%;
+	transition: opacity 0.3s ease-in;
+	transition: bottom 0.35s ease-in;
+}
+.special-offer .special-offer__text {
+	position: absolute;
+	height: 150px;
+	bottom: 0;
+	padding: 30px;
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 600;
+	transition: color 0.25s ease-out;
+}
+.special-offer:hover .special-offer__text {
+	color: #000;
+	transition: color 0.25s ease-in;
+}
+.special-offer .special-offer__text-background {
+	position: absolute;
+	width: 100%;
+	height: 0px;
+	bottom: 0;
+	background-color: #FFF;
+	transition: height 0.25s ease-out;
+}
+.special-offer:hover .special-offer__text-background {
+	height: 150px;
+	transition: height 0.25s ease-in;
+}

@@ -1,0 +1,13 @@
+.breadcrumbs-item {
+	padding-right:20px;
+	color: #94989D;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration: none;
+}
+.breadcrumbs-item:hover {
+	color: #000;
+}
